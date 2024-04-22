@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.css" integrity="sha512-YTuMx+CIxXa1l+j5aDPm98KFbVcYFNhlr2Auha3pwjHCF1lLbY9/ITQQlsUzdM1scW45kHC5KNib4mNa1IFvJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" integrity="sha512-ZfKn7az0YmtPUojZnRXO4CUdt3pn+ogBAyGbqGplrCIR5B/tQwPGtF2q29t+zQj6mC/20w4sSl0cF5F3r0HKSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/attendence_register.css">
+    <title>Time Sheet</title>
+    <style>
+        .th_init{
+            font-size: 8px;
+            font-weight: 600;
+        }
+        .th_uni{
+            font-size: 6px;
+            font-weight: 300;
+        }
+        .name{
+            /* height: 70px; */
+            display: flex;
+            margin-top: -30px;
+            /* margin: 10px; */
+            align-items: flex-end;
+            justify-content: space-between;
+        }
+        tr,td{
+            font-size: 6px;
+            font-weight: normal;
+        }
+        .indi{
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        .indi_sm{
+            margin-top: 5px;
+            font-size: 12px;
+        }
+        p{
+            font-size: smaller;
+        }
+        .kora{
+          width: 400px;
+          
+        }
+        .summary_init{
+            height: 50px;
+            border-radius: 10px;
+            border: 1px solid #444;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            margin-bottom: 10px;
+            .table{
+              /* height: 100%; */
+                thead{
+                    th{
+                        border-bottom: 1px solid #444 !important;
+                    }
+                    .new{
+                        border-right: 1px solid #444 !important;
+                    }
+                }
+                tbody{
+                    .new{
+                        border-right: 1px solid #444 !important;
+                    }
+                }
+                tbody{
+                  tr{
+                    td{
+                      text-align: center;
+                    }
+                  }
+                }
+            }
+        }
+        @media print {
+      .break {
+        clear: both;
+        page-break-after: always;
+    }
+}
+    </style>
+</head>
+<body>
+ <div class="break">
+      <header>
+        <div class="name">
+            <img src="./assets/images/logo-indigo-black.png" width="100" alt="N/A" style="display: inline;">
+            <h1 class="text-center indi" style="display: inline;">INDIGO TEXTILE (PVT) LTD.</h1>
+            <h1> </h1>
+        </div>
+        <div class="border border-bottom border-dark border-1"></div>
+        <h3 class="text-center indi_sm">Time Sheet</h3>
+        <div class="end d-flex justify-content-between align-items-end">
+            <div class="mx-3 lh-1">
+                <p ><strong>Employee No:</strong> 04449 </p>
+                <p ><strong>Employee Name:</strong> Syed Waqar Ali</p>
+                <p ><strong>Employee Designation:</strong> Technician</p>
+                <p ><strong>Employee Department:</strong> Information Technology</p>
+            </div>
+            <div class="rule">
+                <h5 class="mx-3"><b>From:</b> <span id="strtdate"></span> <b>To:</b> <span id="enddate"></span> </h5>
+            </div>
+        </div>
+    </header>
+    <div class="col-lg-12">
+        <div class='table-responsive' id="container">
+            <table class="table table-striped text-center">
+                    <thead>
+                      <tr class="text-center">
+                        <th class="text-center th_init">Attendence Date</th>
+                        <th class="text-center th_init">Shift</th>
+                        <th class="text-center th_init">Date In</th>
+                        <th class="text-center th_init">Time In</th>
+                        <th class="text-center th_init">Time Out</th>
+                        <th class="text-center th_init">Date Out</th>
+                        <th class="text-center th_init">Work Hr.</th>
+                        <th class="text-center th_init">Late Arr.</th>
+                        <th class="text-center th_init">Early Hr.</th>
+                        <th class="text-center th_init">Over Time</th>
+                        <th class="text-center th_init">Break Hr.</th>
+                        <th class="text-center th_init">Remarks</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Fri, 1-March-2024</td>
+                        <td>G5 - 9:00-16:30</td>
+                        <td>01-Mar-2024</td>
+                        <td>09:00</td>
+                        <td>14:30</td>
+                        <td>1-Mar-2024</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>Early out</td>
+                      </tr>
+                      <tr>
+                        <td>Fri, 1-March-2024</td>
+                        <td>G5 - 9:00-16:30</td>
+                        <td>01-Mar-2024</td>
+                        <td>09:00</td>
+                        <td>14:30</td>
+                        <td>1-Mar-2024</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>Early out</td>
+                      </tr>
+                      <tr>
+                        <td>Fri, 1-March-2024</td>
+                        <td>G5 - 9:00-16:30</td>
+                        <td>01-Mar-2024</td>
+                        <td>09:00</td>
+                        <td>14:30</td>
+                        <td>1-Mar-2024</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>Early out</td>
+                      </tr>
+                    
+                      <tr>
+                        <td>Fri, 1-March-2024</td>
+                        <td>G5 - 9:00-16:30</td>
+                        <td>01-Mar-2024</td>
+                        <td>09:00</td>
+                        <td>14:30</td>
+                        <td>1-Mar-2024</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>Early out</td>
+                      </tr>
+                      <tr>
+                        <td>Fri, 1-March-2024</td>
+                        <td>G5 - 9:00-16:30</td>
+                        <td>01-Mar-2024</td>
+                        <td>09:00</td>
+                        <td>14:30</td>
+                        <td>1-Mar-2024</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>Early out</td>
+                      </tr>
+                      <tr>
+                        <td>Fri, 1-March-2024</td>
+                        <td>G5 - 9:00-16:30</td>
+                        <td>01-Mar-2024</td>
+                        <td>09:00</td>
+                        <td>14:30</td>
+                        <td>1-Mar-2024</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>Early out</td>
+                      </tr>
+                      <tr>
+                        <td>Fri, 1-March-2024</td>
+                        <td>G5 - 9:00-16:30</td>
+                        <td>01-Mar-2024</td>
+                        <td>09:00</td>
+                        <td>14:30</td>
+                        <td>1-Mar-2024</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>Early out</td>
+                      </tr>
+                      <tr>
+                        <td>Fri, 1-March-2024</td>
+                        <td>G5 - 9:00-16:30</td>
+                        <td>01-Mar-2024</td>
+                        <td>09:00</td>
+                        <td>14:30</td>
+                        <td>1-Mar-2024</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>Early out</td>
+                      </tr>
+                      <tr>
+                        <td>Fri, 1-March-2024</td>
+                        <td>G5 - 9:00-16:30</td>
+                        <td>01-Mar-2024</td>
+                        <td>09:00</td>
+                        <td>14:30</td>
+                        <td>1-Mar-2024</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>Early out</td>
+                      </tr>
+                      <tr>
+                        <td>Fri, 1-March-2024</td>
+                        <td>G5 - 9:00-16:30</td>
+                        <td>01-Mar-2024</td>
+                        <td>09:00</td>
+                        <td>14:30</td>
+                        <td>1-Mar-2024</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>Early out</td>
+                      </tr>
+                      <tr>
+                        <td>Fri, 1-March-2024</td>
+                        <td>G5 - 9:00-16:30</td>
+                        <td>01-Mar-2024</td>
+                        <td>09:00</td>
+                        <td>14:30</td>
+                        <td>1-Mar-2024</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>Early out</td>
+                      </tr>
+                      <tr>
+                        <td>Fri, 1-March-2024</td>
+                        <td>G5 - 9:00-16:30</td>
+                        <td>01-Mar-2024</td>
+                        <td>09:00</td>
+                        <td>14:30</td>
+                        <td>1-Mar-2024</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>Early out</td>
+                      </tr>
+                      <tr>
+                        <td>Fri, 1-March-2024</td>
+                        <td>G5 - 9:00-16:30</td>
+                        <td>01-Mar-2024</td>
+                        <td>09:00</td>
+                        <td>14:30</td>
+                        <td>1-Mar-2024</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>Early out</td>
+                      </tr>
+                      <tr>
+                        <td>Fri, 1-March-2024</td>
+                        <td>G5 - 9:00-16:30</td>
+                        <td>01-Mar-2024</td>
+                        <td>09:00</td>
+                        <td>14:30</td>
+                        <td>1-Mar-2024</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>Early out</td>
+                      </tr>
+                      <tr>
+                        <td>Fri, 1-March-2024</td>
+                        <td>G5 - 9:00-16:30</td>
+                        <td>01-Mar-2024</td>
+                        <td>09:00</td>
+                        <td>14:30</td>
+                        <td>1-Mar-2024</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>Early out</td>
+                      </tr>
+                      <tr>
+                        <td>Fri, 1-March-2024</td>
+                        <td>G5 - 9:00-16:30</td>
+                        <td>01-Mar-2024</td>
+                        <td>09:00</td>
+                        <td>14:30</td>
+                        <td>1-Mar-2024</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>Early out</td>
+                      </tr>
+                      <tr>
+                        <td>Fri, 1-March-2024</td>
+                        <td>G5 - 9:00-16:30</td>
+                        <td>01-Mar-2024</td>
+                        <td>09:00</td>
+                        <td>14:30</td>
+                        <td>1-Mar-2024</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>Early out</td>
+                      </tr>
+                      <tr>
+                        <td>Fri, 1-March-2024</td>
+                        <td>G5 - 9:00-16:30</td>
+                        <td>01-Mar-2024</td>
+                        <td>09:00</td>
+                        <td>14:30</td>
+                        <td>1-Mar-2024</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>Early out</td>
+                      </tr>
+                      <tr>
+                        <td>Fri, 1-March-2024</td>
+                        <td>G5 - 9:00-16:30</td>
+                        <td>01-Mar-2024</td>
+                        <td>09:00</td>
+                        <td>14:30</td>
+                        <td>1-Mar-2024</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>Early out</td>
+                      </tr>
+                      <tr>
+                        <td>Fri, 1-March-2024</td>
+                        <td>G5 - 9:00-16:30</td>
+                        <td>01-Mar-2024</td>
+                        <td>09:00</td>
+                        <td>14:30</td>
+                        <td>1-Mar-2024</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>Early out</td>
+                      </tr>
+                      <tr>
+                        <td>Fri, 1-March-2024</td>
+                        <td>G5 - 9:00-16:30</td>
+                        <td>01-Mar-2024</td>
+                        <td>09:00</td>
+                        <td>14:30</td>
+                        <td>1-Mar-2024</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>Early out</td>
+                      </tr>
+                      <tr>
+                        <td>Fri, 1-March-2024</td>
+                        <td>G5 - 9:00-16:30</td>
+                        <td>01-Mar-2024</td>
+                        <td>09:00</td>
+                        <td>14:30</td>
+                        <td>1-Mar-2024</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>Early out</td>
+                      </tr>
+                      <tr>
+                        <td>Fri, 1-March-2024</td>
+                        <td>G5 - 9:00-16:30</td>
+                        <td>01-Mar-2024</td>
+                        <td>09:00</td>
+                        <td>14:30</td>
+                        <td>1-Mar-2024</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>Early out</td>
+                      </tr>
+                      <tr>
+                        <td>Fri, 29-March-2024</td>
+                        <td>G5 - 9:00-16:30</td>
+                        <td>01-Mar-2024</td>
+                        <td>09:00</td>
+                        <td>14:30</td>
+                        <td>1-Mar-2024</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>Early out</td>
+                      </tr>
+                      <tr>
+                        <td>Fri, 30-March-2024</td>
+                        <td>G5 - 9:00-16:30</td>
+                        <td>01-Mar-2024</td>
+                        <td>09:00</td>
+                        <td>14:30</td>
+                        <td>1-Mar-2024</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>Early out</td>
+                      </tr>
+                      <tr>
+                        <td>Fri, 31-March-2024</td>
+                        <td>G5 - 9:00-16:30</td>
+                        <td>01-Mar-2024</td>
+                        <td>09:00</td>
+                        <td>14:30</td>
+                        <td>1-Mar-2024</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>02:53</td>
+                        <td>Early out</td>
+                      </tr>
+                      <tr>
+                        <td colspan="6" class="text-end">Total Hours <span><i class="fa fa-arrow-right" style="font-size: 6px;" aria-hidden="true"></i></span></td>
+                        <td>127:12</td>
+                        <td>02:53</td>
+                        <td>01:51</td>
+                        <td>00:05</td>
+                        <td>00:00</td>
+                        <td> </td>
+                      </tr>
+                    </tbody>
+              </table>
+        </div>
+        <h3 class="indi_sm">Summary</h3>
+        <div class="summary_init col-lg-12">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                      <th class="th_uni new">On-time</th>
+                      <th class="th_uni ">Early Departure</th>
+                      <th class="th_uni new">Late Arrival</th>
+                      <th class="th_uni ">Physical present</th>
+                      <th class="th_uni ">Total present</th>
+                      <th class="th_uni new">Absent</th>
+                      <th class="th_uni ">Off Day</th>
+                      <th class="th_uni new">Gazetted Holiday</th>
+                      <th class="th_uni ">Off Day Present</th>
+                      <th class="th_uni new">Gazetted Day Present</th>
+                      <th class="th_uni ">Half Day</th>
+                      <th class="th_uni ">Late Sitting Day</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                      <td class="new">3</td>
+                      <td>3</td>
+                      <td class="new">3</td>
+                      <td>3</td>
+                      <td>3</td>
+                      <td class="new">3</td>
+                      <td>3</td>
+                      <td class="new">3</td>
+                      <td>3</td>
+                      <td class="new">3</td>
+                      <td>3</td>
+                      <td>3</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="summary_init kora col-lg-8">
+            <table class="table table-striped">
+              <thead>
+                  <tr>
+                    <th class="th_uni new text-center">Annual Leaves</th>
+                    <th class="th_uni new text-center">Casual Leaves</th>
+                    <th class="th_uni new text-center">Sick Leaves</th>
+                    <th class="th_uni new text-center">Out Door</th>
+                    <th class="th_uni new text-center">Leave Without Pay</th>
+                    <th class="th_uni new text-center">CPL</th>
+                    <th class="th_uni text-center">Total Leaves</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                    <td class="new">3</td>
+                    <td class="new">3</td>
+                    <td class="new">3</td>
+                    <td class="new">3</td>
+                    <td class="new">3</td>
+                    <td class="new">3</td>
+                    <td >3</td>
+                  </tr>
+              </tbody>
+          </table>
+        </div>
+    </div>
+ </div>
+    
+</body>
+<script src="./assets/js/overtime_sheet.js"></script>
+</html>
