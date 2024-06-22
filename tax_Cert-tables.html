@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/attendence_register.css"> -->
+    <title>Tax Certification</title>
+    <title>Document</title>
+</head>
+<style>
+    *{
+        font-family: monospace;
+        font-size: 10px;
+    }
+    /* .main{
+        margin: 20px !important;
+        padding: 20px !important;
+
+    } */
+    table{
+        width: 100%;
+    }
+    td,th{
+        width: calc(100vw / 12) !important;
+        /* height: 20px !important; */
+    }
+    .underline{
+        width: 100% !important;
+        height: 10px;
+        border: none;
+        border-bottom: 1px solid #000 !important;
+    }
+    .line100{
+        width: 200px !important;
+        height: 20px;
+        border: none;
+        border-bottom: 1px solid #000 !important;
+    }
+</style>
+<body>
+    <table style="width: 100%;" class="main">
+    <tbody>
+        <!-- <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+        </tr> -->
+        <tr>
+            <td colspan="12" style="text-align: center;font-size: 18px; font-weight: bolder;">Certificate of Collection or Deduction of Tax (Including salary)</td>
+        </tr>
+        <tr>
+            <td colspan="5"></td>    
+            <td colspan="2" style="text-align: center;font-size: 16px; font-weight: bolder;">( Under rule 42)</td>
+            <td colspan="5"></td>    
+        </tr>
+        <tr>
+            <td colspan="2">S.No.  {}</td>
+            <td colspan="3"></td>
+            <td colspan="2" style="text-align: center;font-size: 16px; font-weight: bolder;">Original/Duplicate</td>
+            <td colspan="1"></td>
+            <td colspan="4"><div style="display: flex;"><div>Date of Issue:</div> <div class="underline"></div></div></td>
+        </tr>
+        <tr>
+            <td colspan="12" style="height: 10px;"></td>
+        </tr>
+        <tr>
+            <td colspan="4">Certified that the sum of Rupees</td>
+            <td></td>
+            <td colspan="2"><div class="underline"></div></td>
+            <td></td>
+            <td colspan="4">(Amount of tax collected/deducted in figures)</td>
+        </tr>
+        <tr>
+            <td colspan="12"></td>
+        </tr>
+        <tr>
+            <td colspan="4"></td>
+            <td colspan="6"><div class="underline"></div></td>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <td colspan="4"></td>
+            <td colspan="6"><div class="underline"></div></td>
+            <td colspan="2">(Amount in words)</td>
+        </tr>
+        <tr>
+            <td colspan="12" style="height: 20px;"></td>
+        </tr>
+        <tr>
+            <td colspan="4" rowspan="4" style="padding: 10px;">on account of Income tax has been
+                deducted/collected from (Name and address of
+                the person from whom tax collected/deducted)</td>
+                <td colspan="8"><div class="underline"></div></td>
+            </tr>
+            <tr>
+                <td colspan="8"><div class="underline"></div></td>
+            </tr>
+            <tr>
+                <td colspan="8"><div class="underline"></div></td>
+            </tr>
+            <tr>
+                <td colspan="8" style="padding-left: 10px;">In case of an individual, his/her name in full and in case of an association of persons/
+                    company. name and style of the association of persons/company</td>
+        </tr>
+        <tr>
+            <td colspan="12" style="height: 20px;"></td>
+        </tr>
+        <tr>
+            <td colspan="3">having National Tax Number</td>
+            <td colspan="2"></td>
+            <td colspan="3"><div class="underline"></div></td>
+            <td colspan="2"></td>
+            <td colspan="2">(if any) and</td>
+        </tr>
+        <tr>
+            <td colspan="2">holder of CNIC No.</td>
+            <td></td>
+            <td colspan="6"><div class="underline"></div></td>
+            <td></td>
+            <td colspan="2">(in case of an individual)</td>
+        </tr>
+        <tr>
+            <td colspan="2">on</td>
+            <td></td>
+            <td colspan="6"><div class="underline"></div></td>
+            <td></td>
+            <td colspan="2">(Date of collection/deduction)</td>
+        </tr>
+        <tr>
+            <td colspan="2">Or during the period</td>
+            <td></td>
+            <td colspan="6" ><div style="display: flex; justify-content: space-between;"><div>From </div><div class="line100"></div><div> To </div><div class="line100"></div></div></td>
+            <td></td>
+            <td colspan="2">(Period of collection/deduction)</td>
+        </tr>
+        <tr>
+            <td colspan="2">under section</td>
+            <td></td>
+            <td colspan="6"><div class="underline"></div></td>
+            <td></td>
+            <td colspan="2">(Specify the section of Income Tax
+                Ordinance, 2001)</td>
+        </tr>
+        <tr>
+            <td colspan="2">on account of</td>
+            <td></td>
+            <td colspan="6"><div class="underline"></div></td>
+            <td></td>
+            <td colspan="2">(Specify nature)</td>
+        </tr>
+        <tr>
+            <td colspan="2">vide</td>
+            <td></td>
+            <td colspan="6"><div class="underline"></div></td>
+            <td></td>
+            <td colspan="2">(Particulars of LC, Contract etc.)</td>
+        </tr>
+        <tr>
+            <td colspan="2">on the value/amount of Rupee</td>
+            <td></td>
+            <td colspan="6"><div class="underline"></div></td>
+            <td></td>
+            <td colspan="2">(Gross amount on which tax
+                collected/deducted in figures)</td>
+        </tr>
+        <tr>
+            <td colspan="10" style="padding-top: 10px;">This is to further certify that the tax collected/deducted has been deposited in the Federal Government Account as per the
+                following details:</td>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <td colspan="12" style="padding: 5px;">
+                <table border="1" style=" border-collapse: collapse;border: 1px solid #000;">
+                    <thead>
+                        <tr>
+                            <th>Date of Deposit</th>
+                            <th>SBP/NBP/ Treasury</th>
+                            <th>Branch/City</th>
+                            <th>Amount (Rupees)</th>
+                            <th>Challan / Treasury No. / CPR No.</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="6">Company/office etc. collecting/deducting the tax:</td>
+            <td colspan="6"></td>
+        </tr>
+        <tr>
+            <td>Name : </td>
+            <td colspan="5"><div class="underline">INDIGO TEXTILE (PVT) LTD.</div></td>
+            <td>Signature Name : </td>
+            <td colspan="5"><div class="underline">TANVEER AHMED SIDDIQUE</div></td>
+        </tr>
+        <tr>
+            <td>Adress : </td>
+            <td colspan="5"><div class="underline">EMERALD TOWER, 10TH FLOOR, G-19, BLOCK 5
+                CLIFTON ROAD, KHI</div></td>
+            <td>Designation : </td>
+            <td colspan="5"><div class="underline">CHIEF FINANCIAL OFFICER</div></td>
+        </tr>
+        <tr>
+            <td>NTN (if any) : </td>
+            <td colspan="5"><div class="underline">1419010-9</div></td>
+            <td>Seal : </td>
+            <td colspan="5"><div class="underline"></div></td>
+        </tr>
+        <tr>
+            <td>Date : </td>
+            <td colspan="5"><div class="underline"></div></td>
+            <td></td>
+            <td colspan="5"><div class="underline"></div></td>
+        </tr>
+        <tr>
+            <td colspan="10"></td>
+            <td colspan="2">Emp. # {}</td>
+        </tr>
+    </tbody>
+    </table>
+</body>
+</html>
