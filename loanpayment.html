@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/attendence_register.css">
+    <title>Early  Departurer</title>
+    <style>
+        th,td,tr{
+            border: 2px solid #555;
+            text-align: center;
+            font-size: small;
+          }
+          thead{
+            th{
+              border-bottom: 2px solid #555 !important;
+            }
+          }
+          tbody{
+            td{
+                border: none !important;
+                max-width: 30px;
+                }
+            }
+        th{
+            font-size: 12px;
+            font-weight: bolder;
+        }
+        td{
+            font-size: 10px;
+            font-weight: normal;
+        }
+        #solo{
+            border: none !important;
+            td{
+                border: none !important;
+            }
+        }
+        @media print{@page {size: landscape}}
+    </style>
+</head>
+<body>
+    <header>
+        <!-- <img src="./assets/images/logo-indigo-black.png" alt="N/A" class="image-fluid mx-5 my-2"> -->
+
+        <h1 class="text-center">INDIGO TEXTILE (PVT) LTD.</h1>
+        <h3 class="text-center">Loan Payment Report</h3>
+        <div class="end d-flex justify-content-between">
+          <div class="mx-3">
+            <p class="mx-4"><b>Employee:</b> 10928 Aliyan Ahmed</p>
+          </div>
+          <div class="mx-3">
+            <p class="mx-4"><b>Date Of Birth:</b> 30-07-2005</p>
+          </div>
+          <div class="mx-3">
+            <p class="mx-4"><b>Remaining Period of Service:</b> 40 years 10 months 25 days</p>
+          </div>
+          <div class="rule">
+            <p class="mx-4"><b>Employee Joining Date:</b> 1-june-2024 </p>
+          </div>
+        </div>
+        <div class="border border-bottom border-dark border-1 mb-3"></div>
+        <div class="end d-flex justify-content-between">
+          <div class="m-4">
+            <p class="m-0"><b>Loan#:</b> 10928 Aliyan Ahmed</p>
+            <p class="m-0"><b>Loan Admissible:</b> 10928 Aliyan Ahmed</p>
+            <p class="m-0"><b>Loan Sanctioned:</b> 10928 Aliyan Ahmed</p>
+          </div>
+          <div class="m-4">
+            <p class="m-0"><b>Loan Type:</b> 30-07-2005</p>
+            <p class="m-0"><b>Loan Installment:</b> 30-07-2005</p>
+            <p class="m-0"><b>Loan Recieved:</b> 30-07-2005</p>
+          </div>
+          <div class="m-4">
+            <p class="m-0"><b>Monthly Deduction:</b> 40 years 10 months 25 days</p>
+            <p class="m-0"><b>Start From:</b> 40 years 10 months 25 days</p>
+          </div>
+        </div>
+      </header>
+      <div class="col-lg-12">
+        <div class='table-responsive' id="container">
+            <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th rowspan="2" style="line-height: 50px;max-width: 20px;">S.no</th>
+                        <th rowspan="2" style="line-height: 50px;max-width: 30px;">Period</th>
+                        <th colspan="5">Amount</th>
+                        <!-- <th>4</th>
+                        <th>5</th>
+                        <th>6</th>
+                        <th>7</th> -->
+                        <th rowspan="2" style="line-height: 50px;max-width: 25px;">Rate</th>
+                        <th colspan="3">Deduction</th>
+                        <!-- <th>10</th>
+                        <th>11</th> -->
+                        <th rowspan="2" style="max-width: 40px;line-height: 25px;">Outstanding Markup</th>
+                        <th rowspan="2" style="max-width: 40px;line-height: 25px;">Principle Outstanding</th>
+                        <th rowspan="2" style="max-width: 40px;line-height: 50px;">Status</th>
+                      </tr>
+                      <tr>
+                        <!-- <th>1</th>
+                        <th>2</th> -->
+                        <th style="max-width: 30px;">Opening</th>
+                        <th style="max-width: 30px;">Addition</th>
+                        <th style="max-width: 30px;">Lumpsum</th>
+                        <th style="max-width: 30px;">Write Off</th>
+                        <th style="max-width: 30px;">Closing</th>
+                        <!-- <th style="max-width: 30px;">8</th> -->
+                        <th style="max-width: 30px;">Principle</th>
+                        <th style="max-width: 30px;">Mark Up</th>
+                        <th style="max-width: 30px;">Total</th>
+                        <!-- <th>12</th>
+                        <th>13</th>
+                        <th>14</th> -->
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Apr-2024</td>
+                        <td>600000</td>
+                        <td>0</td>
+                        <td>(0)</td>
+                        <td>0</td>
+                        <td>600000</td>
+                        <td>00.00%</td>
+                        <td>100000</td>
+                        <td>0</td>
+                        <td>100000</td>
+                        <td></td>
+                        <td>500000</td>
+                        <td>Paid</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>Apr-2024</td>
+                        <td>600000</td>
+                        <td>0</td>
+                        <td>(0)</td>
+                        <td>0</td>
+                        <td>600000</td>
+                        <td>00.00%</td>
+                        <td>100000</td>
+                        <td>0</td>
+                        <td>100000</td>
+                        <td></td>
+                        <td>500000</td>
+                        <td>Paid</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>Apr-2024</td>
+                        <td>600000</td>
+                        <td>0</td>
+                        <td>(0)</td>
+                        <td>0</td>
+                        <td>600000</td>
+                        <td>00.00%</td>
+                        <td>100000</td>
+                        <td>0</td>
+                        <td>100000</td>
+                        <td></td>
+                        <td>500000</td>
+                        <td>Paid</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>Apr-2024</td>
+                        <td>600000</td>
+                        <td>0</td>
+                        <td>(0)</td>
+                        <td>0</td>
+                        <td>600000</td>
+                        <td>00.00%</td>
+                        <td>100000</td>
+                        <td>0</td>
+                        <td>100000</td>
+                        <td></td>
+                        <td>500000</td>
+                        <td>Paid</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>Apr-2024</td>
+                        <td>600000</td>
+                        <td>0</td>
+                        <td>(0)</td>
+                        <td>0</td>
+                        <td>600000</td>
+                        <td>00.00%</td>
+                        <td>100000</td>
+                        <td>0</td>
+                        <td>100000</td>
+                        <td></td>
+                        <td>500000</td>
+                        <td>Paid</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>Apr-2024</td>
+                        <td>600000</td>
+                        <td>0</td>
+                        <td>(0)</td>
+                        <td>0</td>
+                        <td>600000</td>
+                        <td>00.00%</td>
+                        <td>100000</td>
+                        <td>0</td>
+                        <td>100000</td>
+                        <td></td>
+                        <td>500000</td>
+                        <td>Paid</td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <th style="border: none !important;"><b><strong>Total</strong></b></th>
+                        <td></td>
+                        <td>0</td>
+                        <td>(0)</td>
+                        <td>(0)</td>
+                        <td></td>
+                        <td></td>
+                        <td>600000</td>
+                        <td>0</td>
+                        <td>600000</td>
+                        <td colspan="14"></td>
+                      </tr>
+                    </tbody>
+            </table>
+        </div>
+    </div>
+    
+</body>
+<script src="./assets/js/overtime_sheet.js"></script>
+</html>

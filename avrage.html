@@ -1,0 +1,67 @@
+<script>
+    // function grade1() {
+    //     let arr = [100,80,85]
+    //     let ultra = []
+    //     for (let i = 0; i < arr.length; i++) {
+    //         let local;
+    //         if (i >= 90 && i <= 100 ) {
+                
+    //         }else if(i >= 80 && i <= 90){
+    //             local = "O"
+    //         }else if(i >= 70 && i <= 80){
+    //             local = "O"
+                
+    //         }else if(i >= 60 && i <= 70){
+    //             local = "O"
+                
+    //         }else if(i >= 50 && i <= 60){
+    //             local = "O"
+                
+    //         }else if(i == 40 && i <= 50){
+    //             local = "O"
+                
+    //         }else{
+    //             local = "O"
+                
+    //         }
+    //         ultra.push(local)
+    //     }
+    //     console.log(ultra);
+    // }
+    
+    function getGrade(n) {
+        let grades = {
+            40: 'T',
+            55: 'D',
+            70: 'P',
+            80: 'A',
+            90: 'E',
+            101: 'O',
+        };
+
+        for (const key in grades) {
+                if (n < key) {
+                    return grades[key];
+                }
+            }
+    };
+
+    function grade(avg) {
+
+        let ultra = [];
+       if (typeof avg  == "string" || typeof avg  == "number")
+       {
+            return getGrade(avg);
+       }
+       else{
+            for (let i = 0; i < avg.length; i++) {
+                ultra.push(getGrade(avg[i]));
+            }
+            return ultra;
+       }
+
+    }
+
+        console.log(grade([100,67,85]));
+       
+</script>
