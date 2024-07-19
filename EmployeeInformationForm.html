@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/attendence_register.css">
+    <title>Employee Information Form</title>
+    <style>
+        .box{
+            width: 25px;
+            height: 25px;
+            border: 1px solid #000;
+            border-left: none;
+        }.box:nth-child(1)
+        {
+            border-left: 1px solid #000;
+        }.box:nth-child(6),.box:nth-child(14){
+            background-color: #888;
+        }
+        tr > th:nth-child(1){
+            width: 100px !important;
+        }
+        tr > th:nth-child(4){
+            width: 100px !important;
+        }
+        .realtext{
+            letter-spacing: 17.5px;
+            position: relative;
+            top: -23px;
+            left: 65px;
+        }
+        p{
+            font-size: 10px !important;
+        }
+        .line{
+            border-bottom: 1px solid #000;
+        }
+        .table{
+            th,td,tr{
+                text-align: center;
+                /* font-size: small; */
+                border: 1px solid #000 !important;
+            }
+        }
+        tbody{
+            td{
+                padding: 5px !important;
+            }
+        }
+        th{
+            font-size: 12px;
+            font-weight: bolder;
+        }
+        td{
+            font-size: 10px;
+            font-weight: normal;
+        }
+        .end{
+            position: relative;
+            bottom: -120px;
+        }
+    </style>
+</head>
+<body>
+    <div class="col-12 tophead" style="display: flex;align-items: center; justify-content: space-between;">
+        <div class="col-2">
+            <img src="./assets/images/logo-indigo-black.png" alt="N/A" width="150px" class="image-fluid">
+        </div>
+        <div class="col-6">
+            <!-- <h3 class="text-center"><U>Employee Information Form</U></h3> -->
+        </div>
+        <div class="col-4">
+            <h5 class="text-end"><B>Ref: IND/HR/CIF/001</B></h5>
+            <div class="uni text-end" style="display: flex;align-items: center;"><div class="text-end"><p><B>Employee No:</B></p></div><div class="line" style="width: 170px;"></div></div>
+        </div>
+    </div>
+    <div class="col-12 mb-5">
+        <h3 class="text-center"><U>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Employee Information Form&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</U></h3>
+    </div>
+    <div class="col-12 d-flex px-4 mt-5">
+        <div class="col-4">
+            <div style="display: flex;align-items: center;"><div><p>Name:</p></div><div class="line" style="width: 100%;"></div></div>
+        </div>
+        <div class="col-4">
+            <div style="display: flex;align-items: center;"><div><P>Father Name:</P></div><div class="line" style="width: 60%;"></div></div>
+        </div>
+        <div class="col-4">
+            <div style="display: flex;align-items: center;"><div><p>Gender:</p></div><div class="line" style="width: 100%;"></div></div>
+        </div>
+    </div>
+        <div class="col-12 px-4">
+            <div style="display: flex;align-items: center;"><div><P>Present Address:</P></div><div class="line" style="width: 80%;"></div></div>
+        </div>
+    <div class="col-12 d-flex px-4">
+        <div class="col-4">
+            <div style="display: flex;align-items: center;"><div><p>Telephone No:</p></div><div class="line" style="width: 70%;"></div></div>
+        </div>
+        <div class="col-4">
+            <div style="display: flex;align-items: center;"><div><P>Cell No:</P></div><div class="line" style="width: 80%;"></div></div>
+        </div>
+        <div class="col-4">
+            <div style="display: flex;align-items: center;"><div><p>Emergency No:</p></div><div class="line" style="width: 70%;"></div></div>
+        </div>
+    </div>
+    <div class="col-12 d-flex px-4">
+        <div class="col-8">
+            <div style="display: flex;align-items: center;"><div><p>CNIC #:</p></div><div class="boxdope" style="display: flex;align-items: center;margin-left: 20px;">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div></div>
+            <div class="realtext">42201-8333102-3</div>
+        </div>
+        <div class="col-4">
+            <div style="display: flex;align-items: center;"><div><P>Cell No:</P></div><div class="line" style="width: 80%;"></div></div>
+        </div>
+    </div>
+    <div class="col-12 d-flex px-4">
+        <div class="col-3">
+            <div style="display: flex;align-items: center;"><div><p>Date of birth:</p></div><div class="line" style="width: 60%;"></div></div>
+        </div>
+        <div class="col-3">
+            <div style="display: flex;align-items: center;"><div><P>Place of Birth:</P></div><div class="line" style="width: 60%;"></div></div>
+        </div>
+        <div class="col-3">
+            <div style="display: flex;align-items: center;"><div><p>Age:</p></div><div class="line" style="width: 80%;"></div></div>
+        </div>
+        <div class="col-3">
+            <div style="display: flex;align-items: center;"><div><p>City:</p></div><div class="line" style="width: 70%;"></div></div>
+        </div>
+    </div>
+    <div class="col-12 d-flex px-4">
+        <div class="col-3">
+            <div style="display: flex;align-items: center;"><div><p>Marital Status:</p></div><div class="line" style="width: 50%;"></div></div>
+        </div>
+        <div class="col-6">
+            <div style="display: flex;align-items: center;"><div><P>if Married, No. of Children: Son(s):</P></div><div class="line" style="width: 50%;"></div></div>
+        </div>
+        <div class="col-3">
+            <div style="display: flex;align-items: center;"><div><p> Daughter(s):</p></div><div class="line" style="width: 70%;"></div></div>
+        </div>
+    </div>
+    <div class="col-12">
+        <h5 class="text-center text-uppercase"><U>&nbsp;&nbsp;&nbsp;&nbsp;<b>Education & Training</b>&nbsp;&nbsp;&nbsp;&nbsp;</U></h5>
+    </div>
+    <div class="col-12">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                </tr>
+                <th>Sr.No</th>
+                <th>Certificate / Degree</th>
+                <th>Institution</th>
+                <th>Year's</th>
+                <th>Div/Grade/GPA</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>01</td>
+                    <td>SSC</td>
+                    <td>BSEK</td>
+                    <td>2021</td>
+                    <td>A+</td>
+                </tr>
+                <tr>
+                    <td>02</td>
+                    <td>SSC</td>
+                    <td>BSEK</td>
+                    <td>2021</td>
+                    <td>A+</td>
+                </tr>
+                <tr>
+                    <td>03</td>
+                    <td>SSC</td>
+                    <td>BSEK</td>
+                    <td>2021</td>
+                    <td>A+</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-12">
+        <h5 class="text-center text-uppercase"><U>&nbsp;&nbsp;&nbsp;&nbsp;<b>Working Experience (LAST)</b>&nbsp;&nbsp;&nbsp;&nbsp;</U></h5>
+    </div>
+    <div class="col-12 px-4">
+        <div style="display: flex;align-items: center;"><div style="width: 20%;"><P>Organization:</P></div><div class="line" style="width: 80%;"></div></div>
+    </div>
+    <div class="col-12 px-4">
+        <div style="display: flex;align-items: center;"><div style="width: 20%;"><P>Job Description:</P></div><div class="line" style="width: 80%;"></div></div>
+    </div>
+    <div class="col-12 px-4">
+        <div style="display: flex;align-items: center;"><div style="width: 20%;"><P>Designation / Department:</P></div><div class="line" style="width: 80%;"></div></div>
+    </div>
+    <div class="col-12 d-flex justify-content-between my-5 mb-5">
+        <div class="col-6">
+            <div class="col-12">
+                <h6 class="text-start mx-4"><b>For HR Department</b></h6>
+            </div>
+            <div class="col-12 d-flex justify-content-between">
+                <div class="col-6 d-flex justify-content-around"><div><p class="text-start"><b>Replacment</b></p></div><div class="box border border-1 border-dark px-2">✔</div></div>
+                <div class="col-6 d-flex justify-content-around"><div><p class="text-start"><b>New Hiring</b></p></div><div class="box border border-1 border-dark px-2">✔</div></div>
+            </div>
+            <div class="col-12 px-4 mt-3">
+                <div style="display: flex;align-items: center;"><div style="width: 20%;"><P>Department:</P></div><div class="line" style="width: 80%;"></div></div>
+            </div>
+            <div class="col-12 px-4">
+                <div style="display: flex;align-items: center;"><div style="width: 20%;"><P>Designation:</P></div><div class="line" style="width: 80%;"></div></div>
+            </div>
+            <div class="col-12 px-4">
+                <div style="display: flex;align-items: center;"><div style="width: 20%;"><P>Salary:</P></div><div class="line" style="width: 80%;"></div></div>
+            </div>  
+            <div class="col-12 px-4">
+                <div style="display: flex;align-items: center;"><div style="width: 20%;"><P>Approved:</P></div><div class="line" style="width: 80%;"></div></div>
+            </div>  
+        </div>
+        <div class="col-6">
+            <div class="col-12 px-4">
+                <div style="display: flex;align-items: center;"><div style="width: 30%;"><P>Exployee Signature:</P></div><div class="line" style="width: 70%;"></div></div>
+            </div>
+            <div class="col-12 px-4">
+                <div style="display: flex;align-items: center;"><div style="width: 20%;"><P>Replacement:</P></div><div class="line" style="width: 80%;"></div></div>
+            </div>
+            <div class="col-12 px-4">
+                <div style="display: flex;align-items: center;"><div style="width: 20%;"><P>Employee #:</P></div><div class="line" style="width: 80%;"></div></div>
+            </div>  
+            <div class="col-12 px-4">
+                <div style="display: flex;align-items: center;"><div style="width: 20%;"><P>Last Salary:</P></div><div class="line" style="width: 80%;"></div></div>
+            </div>  
+            <div class="col-12 px-4">
+                <div style="display: flex;align-items: center;"><div style="width: 40%;"><P>Verified by Time Office:</P></div><div class="line" style="width: 60%;"></div></div>
+            </div>  
+            <div class="col-12 px-4">
+                <div style="display: flex;align-items: center;"><div style="width: 30%;"><P>Appointment Date:</P></div><div class="line" style="width: 70%;"></div></div>
+            </div>  
+            <div class="col-12 px-4">
+                <div style="display: flex;align-items: center;"><div style="width: 20%;"><P>Reference:</P></div><div class="line" style="width: 80%;"></div></div>
+            </div>  
+        </div>
+    </div>
+    <div class="end">
+        <div class="col-12 d-flex justify-content-around mt-5">
+            <div class="col-3">
+                <div class="col-8 mx-auto border-top border-1 border-dark">
+                    <h6 class="text-center"><b>Dept. Incharge</b></h6>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="col-8 mx-auto border-top border-1 border-dark">
+                    <h6 class="text-center"><b>Dept. Manager</b></h6>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="col-8 mx-auto border-top border-1 border-dark">
+                    <h6 class="text-center"><b>G.M.</b></h6>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="col-8 mx-auto border-top border-1 border-dark">
+                    <h6 class="text-center"><b>Sr. G.M.</b></h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 d-flex justify-content-around mt-5">
+            <div class="col-3">
+                <div class="col-8 mx-auto border-top border-1 border-dark">
+                    <h6 class="text-center"><b>HR Office</b></h6>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="col-8 mx-auto border-top border-1 border-dark">
+                    <h6 class="text-center"><b>HR Manager</b></h6>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="col-8 mx-auto border-top border-1 border-dark">
+                    <h6 class="text-center"><b>CEO / Director's</b></h6>
+                </div>
+            </div>
+            <div class="col-3">
+               
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1{
+        display: none;
+    }
+    #show:checked ~ h1 {
+        display: block;
+    }
+</style>
+<body>
+    <label for="show">Click to reveal text</label>
+    <input type="checkbox" id="show">
+
+    <h1>This is damn text</h1>
+</body>
+</html>
