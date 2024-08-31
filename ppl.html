@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move Players</title>
+    <style>
+        .mainparam {
+            position: relative;
+            width: 90vw;
+            height: 90vh;
+            border: 1px solid black;
+        }
+        .player1, .player2 {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+        }
+        .player1 {
+            background-color: red;
+        }
+        .player2 {
+            background-color: blue;
+        }
+        #gameOverMessage {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            background-color: black;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="mainparam">
+        <div class="player1"></div>
+        <div class="player2"></div>
+        <div id="gameOverMessage">Game Over!</div>
+    </div>
+
+    <script>
+        const player1 = document.querySelector('.player1');
+        const player2 = document.querySelector('.player2');
+        const mainparam = document.querySelector('.mainparam');
+        const gameOverMessage = document.getElementById('gameOverMessage');
+
+        let player1Position = { top: 0, left: mainparam.clientWidth - 50 };
+        let player2Position = { top: mainparam.clientHeight - 50, left: mainparam.clientWidth - 50 };
+        let gameOver = false;
+
+        // Set initial positions
+        player1.style.top = player1Position.top + 'px';
+        player1.style.left = player1Position.left + 'px';
+        player2.style.top = player2Position.top + 'px';
+        player2.style.left = player2Position.left + 'px';
+
+        addEvent(document, "keydown", function (e) {
+            if (gameOver) return;
+
+            e = e || window.event;
+            var key = e.key || e.keyCode;
+            console.log("Key pressed: " + key + " (Code: " + e.keyCode + ")");
+
+            // Player 1 controls
+            if (key === 'w' || key === 'W') {
+                movePlayer(player1, player1Position, 0, -10);
+            } else if (key === 'a' || key === 'A') {
+                movePlayer(player1, player1Position, -10, 0);
+            } else if (key === 's' || key === 'S') {
+                movePlayer(player1, player1Position, 0, 10);
+            } else if (key === 'd' || key === 'D') {
+                movePlayer(player1, player1Position, 10, 0);
+            }
+
+            // Player 2 controls
+            if (key === 'ArrowUp') {
+                movePlayer(player2, player2Position, 0, -10);
+            } else if (key === 'ArrowLeft') {
+                movePlayer(player2, player2Position, -10, 0);
+            } else if (key === 'ArrowDown') {
+                movePlayer(player2, player2Position, 0, 10);
+            } else if (key === 'ArrowRight') {
+                movePlayer(player2, player2Position, 10, 0);
+            }
+
+            if (checkCollision(player1, player2)) {
+                endGame();
+            }
+        });
+
+        function movePlayer(player, position, deltaX, deltaY) {
+            position.left = Math.max(0, Math.min(mainparam.clientWidth - player.clientWidth, position.left + deltaX));
+            position.top = Math.max(0, Math.min(mainparam.clientHeight - player.clientHeight, position.top + deltaY));
+            player.style.left = position.left + 'px';
+            player.style.top = position.top + 'px';
+        }
+
+        function checkCollision(player1, player2) {
+            const rect1 = player1.getBoundingClientRect();
+            const rect2 = player2.getBoundingClientRect();
+
+            return !(rect1.right < rect2.left ||
+                     rect1.left > rect2.right ||
+                     rect1.bottom < rect2.top ||
+                     rect1.top > rect2.bottom);
+        }
+
+        function endGame() {
+            gameOver = true;
+            gameOverMessage.style.display = 'block';
+        }
+
+        function addEvent(element, eventName, callback) {
+            if (element.addEventListener) {
+                element.addEventListener(eventName, callback, false);
+            } else if (element.attachEvent) {
+                element.attachEvent("on" + eventName, callback);
+            } else {
+                element["on" + eventName] = callback;
+            }
+        }
+    </script>
+</body>
+</html>
